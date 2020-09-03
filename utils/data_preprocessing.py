@@ -25,12 +25,12 @@ def replace_all(df):
 
     return df.drop(["cell_id","ECFP"],axis=1).dropna(axis=0)
 
-drug_file = pd.read_csv("D:\Capstone\DeepCE-master\DeepCE-master\DeepCE\data\ECFP.csv",
+drug_file = pd.read_csv("data\ECFP.csv",
                         names=["pert_id", "chemical", "ECFP"])
-cell_line = pd.read_csv("D:\Capstone\DeepCE-master\DeepCE-master\DeepCE\data\ccle.csv")
-train_file = pd.read_csv("D:\Capstone\DeepCE-master\DeepCE-master\DeepCE\data\signature_train.csv")
-test_file = pd.read_csv("D:\Capstone\DeepCE-master\DeepCE-master\DeepCE\data\signature_test.csv")
-dev_file = pd.read_csv("D:\Capstone\DeepCE-master\DeepCE-master\DeepCE\data\signature_dev.csv")
+cell_line = pd.read_csv("data\ccle.csv")
+train_file = pd.read_csv("data\signature_train.csv")
+test_file = pd.read_csv("data\signature_test.csv")
+dev_file = pd.read_csv("data\signature_dev.csv")
 
 drug_df= pd.DataFrame(drug_file)
 cell_line_df = pd.DataFrame(cell_line)
