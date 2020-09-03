@@ -62,9 +62,9 @@ def knn(x):
     dev_pre = regr_multiknn.predict(dev_X)
     print_scores(dev_y_array, dev_pre)
 
-train = pd.DataFrame(pd.read_csv("D:/Capstone/DeepCE-master/DeepCE-master/DeepCE/data/train.csv"))
-test = pd.DataFrame(pd.read_csv("D:/Capstone/DeepCE-master/DeepCE-master/DeepCE/data/test.csv"))
-dev = pd.DataFrame(pd.read_csv("D:/Capstone/DeepCE-master/DeepCE-master/DeepCE/data/dev.csv"))
+train = pd.DataFrame(pd.read_csv("data/train.csv"))
+test = pd.DataFrame(pd.read_csv("data/test.csv"))
+dev = pd.DataFrame(pd.read_csv("data/dev.csv"))
 
 train_X,train_y=train[train.columns[978:]],train[train.columns[:978]]
 test_X,test_y=test[test.columns[978:]],test[test.columns[:978]]
